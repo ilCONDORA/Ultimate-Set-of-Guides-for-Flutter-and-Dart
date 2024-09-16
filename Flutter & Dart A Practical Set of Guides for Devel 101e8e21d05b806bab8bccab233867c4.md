@@ -4,13 +4,13 @@ Welcome to what I consider the ultimate Flutter and Dart resource, authored by m
 
 The collection is structured into four main sections, each containing multiple detailed guides:
 
-[Global Guides](Flutter%20&%20Dart%20A%20Practical%20Set%20of%20Guides%20for%20Devel%20101e8e21d05b806bab8bccab233867c4/Global%20Guides%20101e8e21d05b807eb68cfdb19e75e5e3.md)
+[Global Guides](Global%20Guides%20101e8e21d05b807eb68cfdb19e75e5e3.md)
 
-[Desktop Guides](Flutter%20&%20Dart%20A%20Practical%20Set%20of%20Guides%20for%20Devel%20101e8e21d05b806bab8bccab233867c4/Desktop%20Guides%20101e8e21d05b80b8adbbd176be7ae8e3.md)
+[Desktop Guides](Desktop%20Guides%20101e8e21d05b80b8adbbd176be7ae8e3.md)
 
-[Mobile Guides](Flutter%20&%20Dart%20A%20Practical%20Set%20of%20Guides%20for%20Devel%20101e8e21d05b806bab8bccab233867c4/Mobile%20Guides%20608b615669a140a1b14b525b641afc1f.md)
+[Mobile Guides](Mobile%20Guides%20608b615669a140a1b14b525b641afc1f.md)
 
-[Web Guides](Flutter%20&%20Dart%20A%20Practical%20Set%20of%20Guides%20for%20Devel%20101e8e21d05b806bab8bccab233867c4/Web%20Guides%20101e8e21d05b80ba9cfec7054973283a.md)
+[Web Guides](Web%20Guides%20101e8e21d05b80ba9cfec7054973283a.md)
 
 Each section serves as a hub of in-depth, practical guides tailored to its specific domain. Within each section, you'll find step-by-step tutorials, best practices, tips and tricks, and real-world examples. This structure ensures that whether you're building for mobile, desktop, or web, you'll have access to a wealth of relevant and actionable information to accelerate your development process.
 
