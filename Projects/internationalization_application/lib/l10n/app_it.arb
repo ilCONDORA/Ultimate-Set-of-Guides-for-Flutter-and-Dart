@@ -1,0 +1,11 @@
+{
+  "@@locale": "it",
+  "appName": "Applicazione di esempio Internazionalizzazione",
+  "@appName": {
+      "description": "Titolo della Applicazione di esempio Internazionalizzazione"
+  },
+  "exampleText": "Questo testo è un esempio",
+  "@exampleText": {
+    "description": "Questo testo farà vedere come funziona il cambio di lingua"
+  }
+}
