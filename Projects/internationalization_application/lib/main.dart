@@ -13,8 +13,7 @@ Future<void> main() async {
   /// Initialize Hydrated Bloc Storage dynamically.
   HydratedBloc.storage = await HydratedStorage.build(
     storageDirectory: kIsWeb
-        ? HydratedStorage
-            .webStorageDirectory // Web storage which is not used for this software.
+        ? HydratedStorage.webStorageDirectory
         : await getApplicationSupportDirectory(), // Store data in the \AppData\Roaming\ilCONDORA folder in Windows and /.local/share in Linux, idk for MacOS.
   );
 
