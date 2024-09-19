@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
-import 'package:internationalization_application/model/app_settings_model.dart';
+import 'package:internationalization_application/models/app_settings_model.dart';
 
 part 'app_settings_event.dart';
 part 'app_settings_state.dart';
