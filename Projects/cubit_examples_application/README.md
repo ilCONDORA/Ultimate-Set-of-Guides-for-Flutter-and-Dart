@@ -1,3 +1,3 @@
 # cubit_examples_application
 
-A new Flutter project.
+A flutter application that shows how to use Cubit with different examples.
