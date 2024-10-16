@@ -4,8 +4,9 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class L10n {
   static final supportedLocales = [
-    const Locale('en'),
-    const Locale('it'),
+    const Locale('en', 'US'),
+    const Locale('en', 'GB'),
+    const Locale('it', 'IT'),
   ];
 
   static const localizationsDelegates = [

@@ -5,7 +5,7 @@ class AppSettingsModel {
   final Locale locale;
 
   /// Sets the default value for the application locale.
-  static const Locale defaultLocale = Locale('en');
+  static const Locale defaultLocale = Locale('en', 'US');
 
   /// Constructor for creating an AppSettings instance.
   AppSettingsModel({
@@ -15,14 +15,18 @@ class AppSettingsModel {
   /// Create an AppSettings instance from a JSON map.
   factory AppSettingsModel.fromJson(Map<String, dynamic> json) {
     return AppSettingsModel(
-      locale: Locale(json['locale'] as String? ?? defaultLocale.languageCode),
+      locale: Locale(
+        json['languageCode'] as String? ?? defaultLocale.languageCode,
+        json['countryCode'] as String? ?? defaultLocale.countryCode,
+      ),
     );
   }
 
   /// Converts an AppSettings instance to a JSON map.
   Map<String, dynamic> toJson() {
     return {
-      'locale': locale.languageCode,
+      'languageCode': locale.languageCode,
+      'countryCode': locale.countryCode,
     };
   }
 

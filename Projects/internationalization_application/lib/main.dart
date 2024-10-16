@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,14 +9,35 @@ import 'package:internationalization_application/l10n/l10n.dart';
 import 'package:internationalization_application/services/condor_localization_service.dart';
 import 'package:path_provider/path_provider.dart';
 
+Future<Directory> getStorageDirectory() async {
+  if (kIsWeb) {
+    return HydratedStorage
+        .webStorageDirectory; // Web storage which is not used for this software.
+  } else if (kDebugMode) {
+    // Store data in the Documents folder in debug mode.
+    final documentsDir = await getApplicationDocumentsDirectory();
+    final debugFolder = Directory(
+        '${documentsDir.path}/REMEMBER TO DELETE -- DEBUG STORAGE for internationalization_application by ilCONDORA');
+
+    // Create the folder if it doesn't exist
+    if (!await debugFolder.exists()) {
+      await debugFolder.create();
+    }
+
+    return debugFolder;
+  } else {
+    // Store data in the \AppData\Roaming\ilCONDORA folder in Windows and /.local/share in Linux, idk for MacOS in release.
+    final supportDir = await getApplicationSupportDirectory();
+    return supportDir;
+  }
+}
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   /// Initialize Hydrated Bloc Storage dynamically.
   HydratedBloc.storage = await HydratedStorage.build(
-    storageDirectory: kIsWeb
-        ? HydratedStorage.webStorageDirectory
-        : await getApplicationSupportDirectory(), // Store data in the \AppData\Roaming\ilCONDORA folder in Windows and /.local/share in Linux, idk for MacOS.
+    storageDirectory: await getStorageDirectory(),
   );
 
   runApp(const MainApp());
@@ -57,7 +80,7 @@ class MainApp extends StatelessWidget {
                           return DropdownMenuItem(
                             value: iterableLocale,
                             child: Text(
-                              iterableLocale.languageCode.toUpperCase(),
+                              "${iterableLocale.languageCode} - ${iterableLocale.countryCode}",
                             ),
                           );
                         }).toList(),

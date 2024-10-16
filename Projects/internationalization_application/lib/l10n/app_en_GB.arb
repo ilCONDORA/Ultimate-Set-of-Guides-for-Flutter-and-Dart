@@ -1,10 +1,10 @@
 {
-  "@@locale": "en",
+  "@@locale": "en_GB",
   "appName": "Application Example Internationalization",
   "@appName": {
       "description": "Title of the Application Example Internationalization"
   },
-  "exampleText": "This text is an example, trash can is US specific",
+  "exampleText": "This text is an example, rubbish bin is GB specific",
   "@exampleText": {
     "description": "This text will show how the language change works"
   }
