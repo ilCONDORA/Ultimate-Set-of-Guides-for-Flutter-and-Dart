@@ -28,9 +28,7 @@ class MainApp extends StatelessWidget {
   }
 }
 
-/// Builds the connect button with appropriate visibility for the loading indicator.
-///
-/// This widget uses a cubit to manage the state of the spinning circle.
+/// A button that will start and stop the spinning circle.
 class DoThingButton extends StatelessWidget {
   const DoThingButton({
     super.key,
@@ -65,7 +63,8 @@ class DoThingButton extends StatelessWidget {
                   /// Invoke the stopSpinning method, which will emit the SpinningCircleStopped state.
                   spinningCircleCubit.stopSpinning();
                 },
-                child: const Text('Do a thing that takes 5 seconds to complete'),
+                child:
+                    const Text('Do a thing that takes 5 seconds to complete'),
               ),
               const SizedBox(width: 14),
               SizedBox(
