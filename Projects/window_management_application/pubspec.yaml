@@ -1,0 +1,55 @@
+name: window_management_application
+description: "A Flutter application that demonstrates how to save and use the Size, Position and Maximized state of the app on the screen."
+publish_to: "none"
+version: 1.0.0
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  bloc: ^9.0.0
+  flutter_bloc: ^9.1.1
+  hydrated_bloc: ^10.0.0
+  path_provider: ^2.1.5
+  window_manager: ^0.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  package_rename: ^1.10.0
+  icons_launcher: ^3.0.1
+
+flutter:
+  uses-material-design: true
+
+# Run 'dart run package_rename' in the terminal to apply the new package information
+package_rename_config:
+  linux:
+    app_name: Window Manager App # (String) The window title of the linux app
+    package_name: it.ilcondora.windowmanagerapp # (String) The application id of the linux app
+    exe_name: windowmanagerapp-linux-x64 # (String) The executable name (binary name) of the linux app
+
+  macos:
+    app_name: Window Manager App # (String) The product name of the macos app
+    package_name: it.ilcondora.windowmanagerapp # (String) The product bundle identifier of the macos app
+    copyright_notice: Copyright ©️ 2025 ilCONDORA. All rights reserved. # (String) The product copyright of the macos app
+
+  windows:
+    app_name: Window Manager App # (String) The window title & software name of the windows app
+    organization: ilCONDORA # (String) The organization name (company name) of the windows app
+    copyright_notice: Copyright ©️ 2025 ilCONDORA. All rights reserved. # (String) The legal copyright of the windows app
+    exe_name: windowmanagerapp-win64 # (String) The executable name (binary name) of the windows app
+
+# Run 'dart run icons_launcher:create' in the terminal to generate the icons
+icons_launcher:
+  image_path: "assets/app_icon.png"
+  platforms:
+    windows:
+      enable: true
+    macos:
+      enable: true
+    linux:
+      enable: true
