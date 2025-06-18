@@ -90,6 +90,8 @@ class MainApp extends StatefulWidget {
 // We need to use WindowListener and StatefulWidget to use the windowManager methods.
 // I'm not going to explain the methods because the names of them are self explanatory.
 class _MainAppState extends State<MainApp> with WindowListener {
+  final WindowCubit windowCubit = WindowCubit();
+
   @override
   void initState() {
     super.initState();
@@ -99,28 +101,28 @@ class _MainAppState extends State<MainApp> with WindowListener {
   @override
   void onWindowMaximize() {
     if (mounted) {
-      WindowCubit().changeWindowMaximizedState(true);
+      windowCubit.changeWindowMaximizedState(true);
     }
   }
 
   @override
   void onWindowUnmaximize() {
     if (mounted) {
-      WindowCubit().changeWindowMaximizedState(false);
+      windowCubit.changeWindowMaximizedState(false);
     }
   }
 
   @override
   void onWindowResized() async {
     if (mounted) {
-      WindowCubit().changeWindowSize(await windowManager.getSize());
+      windowCubit.changeWindowSize(await windowManager.getSize());
     }
   }
 
   @override
   void onWindowMoved() async {
     if (mounted) {
-      WindowCubit().changeWindowPosition(await windowManager.getPosition());
+      windowCubit.changeWindowPosition(await windowManager.getPosition());
     }
   }
 
